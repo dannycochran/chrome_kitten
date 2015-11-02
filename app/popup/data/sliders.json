@@ -1,0 +1,67 @@
+[
+  {
+    'id': 'volume',
+    'icon': 'volume_up',
+    'icon_alt': 'volume_mute',
+    'name': 'Volume',
+    'range': [0, 100]
+  },
+  {
+    'id': 'frequency',
+    'icon': 'schedule',
+    'name': 'Frequency',
+    'values': [
+      {
+        value: 0,
+        name: 'never'
+      },
+      {
+        value: 0.5,
+        name: 'every other day'
+      },
+      {
+        value: 1,
+        name: 'once a day',
+      },
+      {
+        value: 4,
+        name: 'once every six hours'
+      },
+      {
+        value: 8,
+        name: 'once every three hours'
+      },
+      {
+        value: 24,
+        name: 'once an hour'
+      },
+      {
+        value: 48,
+        name: 'once every 30 minutes'
+      },
+      {
+        value: 96,
+        name: 'once every 15 minutes'
+      },
+      {
+        value: 288,
+        name: 'once every 5 minutes'
+      },
+      {
+        value: 1440,
+        name: 'once a minute'
+      },
+      {
+        value: 2880,
+        name: 'every 30 seconds'
+      },
+      {
+        value: 17280,
+        name: 'every 5 seconds'
+      }, {
+        value: 86400,
+        name: 'every second'
+      }
+    ]
+  }
+]

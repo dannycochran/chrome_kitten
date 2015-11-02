@@ -1,0 +1,28 @@
+// Reset file path to fonts
+$color-black: rgb(91, 91, 91);
+$color-white: rgb(255, 255, 255);
+$color-lightgrey: lighten($color-black, 40);
+$color-orange: #fcb407;
+
+$color-secondary: $secondary-color;
+$color-success: $success-color; // materialize convention
+$color-error: $error-color;
+$color-warning: desaturate($error-color, 70%);
+
+$unit-major: 100px;
+$offset: 20px;
+
+$fontWeight-bold: 600;
+$fontWeight-medium: 400;
+$fontWeight-light: 200;
+
+$fontSize-icon: 16px;
+$fontSize-large: 16px;
+$fontSize-normal: 12px;
+$fontSize-small: 11px;
+$fontSize-smallest: 10px;
+
+$height-header: 50px;
+$height-footer: 40px;
+
+$duration-animation: .4s;

@@ -1,0 +1,46 @@
+@charset "UTF-8";
+
+@import "common";
+@import "patterns";
+
+// Reset
+@import "../../../node_modules/materialize-sass-updated/sass/components/normalize";
+
+// Materialize Components
+@import "../../../node_modules/materialize-sass-updated/sass/components/global";
+@import "../../../node_modules/materialize-sass-updated/sass/components/icons-material-design";
+// @import "../../../node_modules/materialize-sass-updated/sass/components/grid";
+// @import "../../../node_modules/materialize-sass-updated/sass/components/navbar";
+@import "../../../node_modules/materialize-sass-updated/sass/components/roboto";
+@import "../../../node_modules/materialize-sass-updated/sass/components/typography";
+// @import "../../../node_modules/materialize-sass-updated/sass/components/cards";
+// @import "../../../node_modules/materialize-sass-updated/sass/components/toast";
+// @import "../../../node_modules/materialize-sass-updated/sass/components/tabs";
+// @import "../../../node_modules/materialize-sass-updated/sass/components/tooltip";
+@import "../../../node_modules/materialize-sass-updated/sass/components/buttons";
+@import "../../../node_modules/materialize-sass-updated/sass/components/dropdown";
+@import "../../../node_modules/materialize-sass-updated/sass/components/waves";
+// @import "../../../node_modules/materialize-sass-updated/sass/components/modal";
+// @import "../../../node_modules/materialize-sass-updated/sass/components/collapsible";
+// @import "../../../node_modules/materialize-sass-updated/sass/components/materialbox";
+@import "../../../node_modules/materialize-sass-updated/sass/components/form";
+// @import "../../../node_modules/materialize-sass-updated/sass/components/table_of_contents";
+// @import "../../../node_modules/materialize-sass-updated/sass/components/sideNav";
+@import "../../../node_modules/materialize-sass-updated/sass/components/preloader";
+// @import "../../../node_modules/materialize-sass-updated/sass/components/slider";
+// @import "../../../node_modules/materialize-sass-updated/sass/components/date_picker/default.scss";
+// @import "../../../node_modules/materialize-sass-updated/sass/components/date_picker/default.date.scss";
+// @import "../../../node_modules/materialize-sass-updated/sass/components/date_picker/default.time.scss";
+
+body {
+  width: $unit-major * 3;
+  height: auto;
+  color: $color-black;
+  background-color: white;
+  div#chrome_kitten {
+    display: flex;
+    flex-flow: column nowrap;
+    height: auto;
+    width: 100%;
+  }
+}

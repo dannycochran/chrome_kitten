@@ -1,0 +1,12 @@
+@import '../app/common';
+
+form.slider {
+  span.thumb {
+    margin-left: -$offset * 0.75 !important;
+    pointer-events: none;
+    &.active {
+      height: $offset * 1.5 !important;
+      top: -$offset * 1.5 !important;
+    }
+  }
+}

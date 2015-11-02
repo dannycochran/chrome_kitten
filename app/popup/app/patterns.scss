@@ -1,0 +1,114 @@
+
+.dropdown-item {
+  line-height: $offset / 1.5;
+  border-bottom: solid 1px lighten($color-lightgrey, 10);
+  span {
+    font-size: $fontSize-normal;
+    padding-left: $offset; padding-right: $offset/2;
+  }
+  &.header {
+    pointer-events: none;
+    font-weight: $fontWeight-bold;
+    span {
+      padding-left: $offset/2;
+    }
+  }
+  &.selected {
+    background-color: lighten($color-success, 40);
+  }
+}
+
+.collection-item {
+  overflow: hidden;
+}
+
+.row {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  & > * {
+    flex: 1 auto;
+  }
+}
+
+.shadow {
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+}
+
+.anti-shadow {
+  box-shadow: 0 0px 0px 0 transparent, 0 0px 0px 0 transparent;
+}
+
+.disabled {
+  color: $color-lightgrey;
+  pointer-events: none;
+}
+
+.info {
+  width: $offset;
+  height: $offset;
+  border-radius: $offset;
+  background-color: $color-lightgrey !important;
+  position: relative;
+  border: none;
+  color: white;
+}
+
+.tooltip {
+  &:after {
+    width: 0; padding: 0;
+    opacity: 0;
+    transition: top .1s ease, bottom .1s, left .1s ease, right .1s ease, opacity .1s ease;
+    content: '';
+    white-space: pre;
+    color: white;
+    width: auto;
+    position: absolute;
+    display: inline-block;
+    background-color: $color-orange;
+    text-align: left;
+    pointer-events: none;
+    font-size: $fontSize-small;
+    z-index: 100000;
+  }
+  &:hover:after {
+    @extend .shadow;
+    width: auto;
+    opacity: 1;
+    padding: $offset/4;
+  }
+  &[data-tooltip-bottom] {
+    &:after {
+      top: $offset/2;
+      right: 0;
+      content: attr(data-tooltip-bottom);
+    }
+    &:hover:after {
+      top: $offset * 1.5;
+    }
+  }
+}
+
+strong {
+  font-weight: 600 !important;
+}
+
+label {
+  pointer-events: none;
+}
+
+::-webkit-input-placeholder {
+   font-weight: $fontWeight-light;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+   font-weight: $fontWeight-light;  
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   font-weight: $fontWeight-light;  
+}
+
+:-ms-input-placeholder {  
+   font-weight: $fontWeight-light;  
+}

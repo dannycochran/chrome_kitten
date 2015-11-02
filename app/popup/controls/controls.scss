@@ -1,0 +1,35 @@
+@import '../app/common';
+
+div#controls {
+  width: 100%;
+  font-size: $fontSize-large;
+  text-align: center;
+  flex: 1 0 auto;
+  div.slider-container {
+    height: $height-header * 3;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    transition: background-color .2s ease;
+    border-bottom: solid 1px $color-lightgrey;
+    div.label {
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: center;
+      align-items: center;
+      margin-top: $offset/2;
+      label {
+        margin-left: $offset / 2;
+      }
+    }
+    &.off {
+      background-color: transparentize(lighten($color-warning, 30), 0.8);
+    }
+    &.active {
+      div.label > * {
+        color: $color-secondary;
+      }
+    }
+  }
+}

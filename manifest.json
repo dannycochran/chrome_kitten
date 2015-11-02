@@ -1,0 +1,38 @@
+{
+  "name": "Chrome Kittten",
+  "description": "Chrome kitten randomly meows at you. Simulation is 100% representative of actual cat behavior.",
+  "version": "0.0.1",
+  "permissions": [
+    "activeTab", "tabs", "background", "contextMenus", "cookies", "history", "idle", "management", "notifications", "storage", "tabs", "webNavigation", "webRequest", "webRequestBlocking"
+  ],
+  "background": {
+    "scripts": [
+      "dist/background_script.js"
+    ],
+    "persistent": true
+  },
+  "browser_action": {
+    "default_title": "Chrome Kitten",
+    "default_popup": "dist/popup.html"
+  },
+  "web_accessible_resources": [
+     "dist/*",
+     "dist/font",
+     "dist/font/material-design-icons",
+     "dist/font/material-design-icons/*"
+  ],
+  "manifest_version": 2,
+  "content_security_policy": "script-src 'self'; object-src 'self'",
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["dist/content_script.js"],
+      "run_at": "document_end"
+    }
+  ],
+  "icons": {
+    "16": "dist/img/icon16.png",
+    "48": "dist/img/icon48.png",
+    "128": "dist/img/icon128.png"
+  }
+}

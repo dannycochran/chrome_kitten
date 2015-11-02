@@ -1,0 +1,13 @@
+@import '../app/common';
+
+div#footer {
+  width: 100%;
+  line-height: $height-header / 1.5;
+  flex: 0 auto;
+  text-align: center;
+  a {
+    display: inline-block;
+    width: 90%;
+    cursor: pointer;
+  }
+}

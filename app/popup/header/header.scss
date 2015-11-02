@@ -1,0 +1,9 @@
+@import '../app/common';
+
+div#header {
+  width: 100%;
+  font-size: $fontSize-large;
+  line-height: $height-header;
+  text-align: center;
+  flex: 0 auto;
+}
