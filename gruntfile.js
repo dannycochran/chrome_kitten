@@ -15,7 +15,7 @@ module.exports = function (grunt) {
     },
     shell: {
       build: {
-        command: 'find . -name "*.pem" -type f -delete; find . -name ".DS_Store" -depth -exec rm {} \; find . -name "Icon?" -depth -exec rm {} \; zip -r chrome_kitten.zip *;'
+        command: 'find . -name "*.pem" -type f -delete; find . -name ".DS_Store" -depth -exec rm {} \; find . -name "Icon?" -depth -exec rm {} \; cd dist; zip -r chrome_kitten.zip *;'
       }
     },
     uglify: {

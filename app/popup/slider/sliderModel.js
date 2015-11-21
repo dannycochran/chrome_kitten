@@ -8,9 +8,7 @@ export class SliderModel {
     this.range = data.range;
     this.icon = data.icon;
     this.icon_alt = data.icon_alt;
-
     this.active = m.prop(false);
-    this._key = `${this.id}_range`;
 
     if (data.values) {
       this.values = data.values;
@@ -18,11 +16,12 @@ export class SliderModel {
       this.scale = d3.quantize().domain(this.range).range(this.values);
     }
 
-    var middle = (this.range[1] - this.range[0]) / 2;
+    var middle = Math.floor((this.range[1] - this.range[0]) / 2);
     this.val = m.prop(middle);
 
-    chrome.storage.local.get(this._key, function (d) {
-      this.val(d[this._key] || middle);
+    chrome.storage.local.get(this.id, function (d) {
+      this.setSliderVal(d[this.id] || middle);
+      this.active(false);
       m.redraw();
     }.bind(this));
   }
@@ -30,6 +29,6 @@ export class SliderModel {
   setSliderVal (val) {
     this.active(true);
     this.val(val);
-    chrome.storage.local.set({[this._key]: val});
+    chrome.storage.local.set({[this.id]: val});
   }
 }
