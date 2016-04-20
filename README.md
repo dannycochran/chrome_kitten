@@ -1,1 +1,1 @@
-Chrome Kitten meows at you randomly. Currently raising Series A funding.
+Chrome Kitten meows at you randomly.
